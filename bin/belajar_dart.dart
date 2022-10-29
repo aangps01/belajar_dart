@@ -1,17 +1,10 @@
 
 void main(){
-  greetNewUser(isVerified: true, name: 'aang');
-}
-
-void greetNewUser({String? name, int? age, required bool isVerified }){
-  if(isVerified){
-    if(age!=null)
-    {
-      print('Halo $name, umur anda $age dan anda telah terdaftar');
-    }else{
-      print('Halo $name, anda telah terdaftar');
+  for (int i=0; i<10; i++){
+    String temp = '';
+    for (int j = 0; j < i; j++) {
+      temp += '*';
     }
-  }else{
-    print('halo $name, umur anda $age namun anda belum terdaftar');
+    print(temp);
   }
 }
