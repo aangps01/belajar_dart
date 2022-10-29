@@ -1,8 +1,17 @@
-import 'dart:io';
 
 void main(){
-  print('Masukkan suhu dalam Fahrenheit :');
-  var fahrenheit = num.parse(stdin.readLineSync()!);
-  var celcius = (fahrenheit-32)*5/9;
-  print('$fahrenheit derajat Fahrenheit = $celcius derajat celcius');
+  greetNewUser(isVerified: true, name: 'aang');
+}
+
+void greetNewUser({String? name, int? age, required bool isVerified }){
+  if(isVerified){
+    if(age!=null)
+    {
+      print('Halo $name, umur anda $age dan anda telah terdaftar');
+    }else{
+      print('Halo $name, anda telah terdaftar');
+    }
+  }else{
+    print('halo $name, umur anda $age namun anda belum terdaftar');
+  }
 }
