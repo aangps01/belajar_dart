@@ -1,10 +1,8 @@
+import 'Animal.dart';
 
 void main(){
-  for (int i=0; i<10; i++){
-    String temp = '';
-    for (int j = 0; j < i; j++) {
-      temp += '*';
-    }
-    print(temp);
-  }
+  var myAnimal = Animal('Milo', 22, 23.4);
+  print(myAnimal.weight);
+  myAnimal.eat();
+  print(myAnimal.weight);
 }
